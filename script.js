@@ -209,7 +209,7 @@ const screenController = ((gameController) => {
             opponentOption = parseInt(opponentOption);
             chooseOpponentContainer.style.visibility = "hidden";
             if (opponentOption === 2) {
-                whatDifficultyText.style.display = "block";
+                whatDifficultyText.style.visibility = "visible";
             }
             return opponentOption
         })
