@@ -23,8 +23,7 @@ body {
     flex-direction: column;
     font-family: "VT323", sans-serif;
     background-color: var(--background-color);
-    overflow-x: hidden;
-    height: 130vh;
+    max-height: 130vh;
 }
 
 .choose-opponent-container {
@@ -141,7 +140,7 @@ body {
 .choose-difficulty {
     position: absolute;
     width: 265px;
-    height: 280px;
+    height: 266px;
     z-index: 2;
     display: none;
     justify-content: center;
@@ -295,7 +294,6 @@ footer > a:hover {
     z-index: 2;
     left: 50%;
     top: 50%;
-    transform: translate(300%, -50%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -303,7 +301,7 @@ footer > a:hover {
 }
 
 .active {
-    transform: translate(-48%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .winner-title {
@@ -320,6 +318,14 @@ footer > a:hover {
         gap: 30px;
     }
 
+    .choose-opponent-container > h1 {
+        top: 35%;
+    }
+    
+    .opponent-btn-container {
+        top: 45%;
+    }
+
     .title {
         font-size: 3rem;
     }
@@ -328,11 +334,16 @@ footer > a:hover {
         width: 350px;
     }
 
+    .choose-difficulty {
+        width: 220px;
+        height: 273px;
+    }
+
     footer > p {
         font-size: 1.3rem;
     }
 
     footer > a {
-        font-size: 1.8rem;
+        font-size: 1.rem;
     }
 }
