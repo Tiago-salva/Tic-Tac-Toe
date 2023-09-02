@@ -21,37 +21,37 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
     font-family: "VT323", sans-serif;
     background-color: var(--background-color);
     overflow-x: hidden;
+    height: 130vh;
 }
 
 .choose-opponent-container {
-    height: 134vh;
+    height: 130vh;
+    width: 100%;
     background-color: rgba(137, 160, 113, 0.8);
     backdrop-filter: blur(0.2rem);
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     z-index: 1;
     visibility: visible;
     transition: all 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .choose-opponent-container > h1 {
     text-align: center;
     position: sticky;
-    top: 35%;
+    top: 40%;
 }
 
 .opponent-btn-container {
     display: flex;
     position: sticky;
     top: 50%;
-    transform: translate(22%, -50%);
     gap: 50px;
 }
 
@@ -64,6 +64,11 @@ body {
     font-family: "VT323", sans-serif;
     background-color: var(--background-color);
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#opponent-btn:hover {
+    background-color: var(--body-color);
 }
 
 .title {
@@ -73,13 +78,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin: 60px 0 20px 0;
 }
 
 .what-difficulty {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
-    display: none;
+    visibility: hidden;   
 }
 
 .board-container {
@@ -246,7 +251,7 @@ footer {
     align-items: center;
     font-size: 1.5rem;
     gap: 15px;
-    margin-top: 40px;
+    margin-top: 80px;
     position: relative;
 }
 
@@ -262,7 +267,7 @@ footer > a:hover {
 }
 
 .blur {
-    height: 162vh;
+    min-height: 160vh;
     background-color: rgba(137, 160, 113, 0.8);
     backdrop-filter: blur(0.2rem);
     position: absolute;
@@ -298,7 +303,7 @@ footer > a:hover {
 }
 
 .active {
-    transform: translate(-50%, -50%);
+    transform: translate(-48%, -50%);
 }
 
 .winner-title {
@@ -307,4 +312,27 @@ footer > a:hover {
 
 .winner-symbol {
     font-size: 8rem;
+}
+
+@media screen and (max-width: 500px) {
+    .opponent-btn-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .board-container {
+        width: 350px;
+    }
+
+    footer > p {
+        font-size: 1.3rem;
+    }
+
+    footer > a {
+        font-size: 1.8rem;
+    }
 }
