@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="choose-opponent-container">
+        <h1>Choose your opponent</h1>
+        <div class="opponent-btn-container">
+            <button id="opponent-btn" data-attribute="1">Human</button>
+            <button id="opponent-btn" data-attribute="2">IA</button>
+        </div>
+    </div>
+
+    <h1 class="title">Tic-Tac-Toe</h1>
+
+    <p class="what-difficulty">Difficulty: Easy</p>
+
+    <div class="board-container">
+        
+        <div id="board">
+            <div class="cell" data-row="0" data-col="0"></div>
+            <div class="cell" data-row="0" data-col="1"></div>
+            <div class="cell no-r" data-row="0" data-col="2"></div>
+            <div class="cell" data-row="1" data-col="0"></div>
+            <div class="cell" data-row="1" data-col="1"></div>
+            <div class="cell no-r" data-row="1" data-col="2"></div>
+            <div class="cell no-b" data-row="2" data-col="0"></div>
+            <div class="cell no-b" data-row="2" data-col="1"></div>
+            <div class="cell no-b no-r" data-row="2" data-col="2"></div>
+        
+            <div class="choose-difficulty">
+                <button id="difficulty-btn" data-attribute="2">Easy</button>
+                <button id="difficulty-btn" data-attribute="4">Medium</button>
+                <button id="difficulty-btn" data-attribute="6">Impossible</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="cross">
+                <div class="cross1"></div>
+                <div class="cross2"></div>
+            </div>
+    
+            <div class="buttons">
+                <button id="restart-btn">Restart</button>
+                <button id="select-difficulty-btn">Difficulty</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Copyright © 2023 Tiago-salva</p>
+        <a href="https://github.com/Tiago-salva" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </footer>
+
+    <div class="blur">
+        <div class="show-winner">
+            <h1 class="winner-title"></h1>
+            <h1 class="winner-symbol"></h1>
+        </div>
+    </div>
+
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
