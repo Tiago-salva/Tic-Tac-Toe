@@ -266,7 +266,7 @@ footer > a:hover {
 }
 
 .blur {
-    min-height: 160vh;
+    max-height: 130vh;
     background-color: rgba(137, 160, 113, 0.8);
     backdrop-filter: blur(0.2rem);
     position: absolute;
