@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+    --color0: #fdf9f9;
+    --screen-color: #89a170;
+    --screen-color-hover: #7d9168;
+    --screen-border-color: #6c7e59;
+    --background-color: #ffffff;
+    --body-color: #d8d8d8;
+    --btn-color: #BB2525;
+    --btn-color-hover: #ac2222;
+    --border-color: #73797d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    font-family: "VT323", sans-serif;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+.choose-opponent-container {
+    height: 134vh;
+    background-color: rgba(137, 160, 113, 0.8);
+    backdrop-filter: blur(0.2rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    visibility: visible;
+    transition: all 0.5s ease-out;
+}
+
+.choose-opponent-container > h1 {
+    text-align: center;
+    position: sticky;
+    top: 35%;
+}
+
+.opponent-btn-container {
+    display: flex;
+    position: sticky;
+    top: 50%;
+    transform: translate(22%, -50%);
+    gap: 50px;
+}
+
+#opponent-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.8rem;
+    font-family: "VT323", sans-serif;
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+.title {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.what-difficulty {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    display: none;
+}
+
+.board-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 550px;
+    border: 3px solid black;
+    border-radius: 15px 15px 50px 15px;
+    overflow: hidden;
+    background-color: var(--body-color);
+    margin-top: 20px;
+}
+
+#board {
+    width: 90%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 20px;
+    padding: 25px 45px;
+    border-radius: 15px 15px 50px 15px;
+    background-color: var(--border-color);
+    overflow: hidden;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: var(--screen-color);
+    border-bottom: 3px solid var(--screen-border-color);
+    border-right: 3px solid var(--screen-border-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+.cell:hover {
+    background-color: var(--screen-color-hover);
+}
+
+.cell.no-r {
+    border-right: none;
+}
+
+.cell.no-b {
+    border-bottom: none;
+}
+
+.choose-difficulty {
+    position: absolute;
+    width: 265px;
+    height: 280px;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.choose-difficulty.showed {
+    display: flex;
+}
+
+#difficulty-btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid var(--screen-border-color);
+    cursor: pointer;
+    background-color: var(--screen-color);
+    color: black;
+    font-family: "VT323", sans-serif;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+#difficulty-btn:nth-of-type(4) {
+    border: none;
+}
+
+#difficulty-btn:hover {
+    background-color: var(--screen-color-hover);
+}
+
+.controls {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    overflow: hidden;
+    margin: auto 0;
+}
+
+.cross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+.cross1 {
+    background-color: black;
+    width: 25px;
+    height: 65px;
+    position: relative;
+    top: 0px;
+    left: 47px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cross2 {
+    background-color: black;
+    width: 70px;
+    height: 25px;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+}
+
+
+#restart-btn,
+#select-difficulty-btn {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 15px 15px 50px 15px;
+    background-color: var(--btn-color);
+    color: var(--color0);
+    font-family: "VT323", sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+} 
+
+#restart-btn:hover {
+    background-color: var(--btn-color-hover);
+}
+
+footer {
+    width: 100%;
+    height: 65px;
+    background-color: #BB2525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 15px;
+    margin-top: 40px;
+    position: relative;
+}
+
+footer > a {
+    color: black;
+    font-size: 2rem;
+    margin-top: 2px;
+    transition: transform 0.3s;
+}
+
+footer > a:hover {
+    transform: scale(1.1);
+}
+
+.blur {
+    height: 162vh;
+    background-color: rgba(137, 160, 113, 0.8);
+    backdrop-filter: blur(0.2rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display {
+    opacity: 1;
+    visibility: visible;
+}
+
+.show-winner {
+    position: sticky;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(300%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease-out;
+}
+
+.active {
+    transform: translate(-50%, -50%);
+}
+
+.winner-title {
+    font-size: 2.5rem;
+}
+
+.winner-symbol {
+    font-size: 8rem;
+}
