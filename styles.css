@@ -23,11 +23,11 @@ body {
     flex-direction: column;
     font-family: "VT323", sans-serif;
     background-color: var(--background-color);
-    min-height: 100vh;
+    height: 800px;
 }
 
 .choose-opponent-container {
-    height: 100vh;
+    height: 800px;
     width: 100%;
     background-color: rgba(137, 160, 113, 0.8);
     backdrop-filter: blur(0.2rem);
@@ -77,7 +77,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0 
+    margin: 30px 0 
 }
 
 .what-difficulty {
@@ -140,7 +140,7 @@ body {
 .choose-difficulty {
     position: absolute;
     width: 265px;
-    height: 266px;
+    height: 277px;
     z-index: 2;
     display: none;
     justify-content: center;
@@ -220,7 +220,6 @@ body {
     width: 60%;
 }
 
-
 #restart-btn,
 #select-difficulty-btn {
     width: 150px;
@@ -266,7 +265,7 @@ footer > a:hover {
 }
 
 .blur {
-    height: 100vh;
+    height: 800px;
     width: 100%;
     background-color: rgba(137, 160, 113, 0.8);
     backdrop-filter: blur(0.2rem);
@@ -331,8 +330,8 @@ footer > a:hover {
     }
 
     .choose-difficulty {
-        width: 220px;
-        height: 273px;
+        width: 218px;
+        height: 279px;
     }
 
     footer > p {
