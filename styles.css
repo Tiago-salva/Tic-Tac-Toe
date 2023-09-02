@@ -324,6 +324,7 @@ footer > a:hover {
 
     .title {
         font-size: 3rem;
+        color: red;
     }
 
     .board-container {
@@ -341,5 +342,11 @@ footer > a:hover {
 
     footer > a {
         font-size: 1.rem;
+    }
+
+    body,
+    .choose-opponent-container,
+    .blur {
+        height: 100vh;
     }
 }
